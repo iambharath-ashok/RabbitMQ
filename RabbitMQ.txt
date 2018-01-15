@@ -1,0 +1,35 @@
+RabbitMQ
+RABBIT MQ
+•	RabbitMQ is a Messaging Broker.
+•	RabbitMQ implements AMQP.
+•	AMQP stands for Advanced Messaging Queuing Protocol.
+ 
+AMQP
+•	AMQP Standardizes messaging, using Producers, Consumers, Brokers.
+•	Advantage of Messaging Queue is that it increases loose coupling and scalability.
+
+
+How AMQP Works	
+
+AMQP will have Producers and Consumers.
+Producers and Consumers will communicate through Queue.
+Producer will not send the messages directly to the Queue instead it will use the exchange.
+Producers will send the messages to exchange and exchange will later forwards it to queue.
+
+Exchange will make sense only if it has only one queue to forward the messages.
+
+
+
+	
+What is Publishing of Message?
+	- Producer will send the message to exchange then later exchange will forward the message to Queue.
+	
+What is Consuming of Messages?
+	- Consuming the messages from consumer from queue is Consuming of messages.
+	
+	
+
+
+
+ 
+
