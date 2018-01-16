@@ -17,9 +17,40 @@ Producer will not send the messages directly to the Queue instead it will use th
 Producers will send the messages to exchange and exchange will later forwards it to queue.
 
 Exchange will make sense only if it has only one queue to forward the messages.
+An exchange connects to queue via binding and binding key.
+Producer needs to send the routing key along with message to exchange.
+Exchange will use the binding key to send the messages to queue.
+
+How exchange will compare the routimg key dependes on type of exchange.
+	Type of Exchange:
+		- Fanout Exchange
+			Fanout exchange ignores the routing key and send messages to all the known queues.
+		- Direct Exchange
+			Direct exchange will send the messages to queue where routing key is exactly same as binding key.
+		- Topic Exchange
+			Topic Exchange allows partial matches of key.
+		- Header Exchange
+			Header Exchange use header meta data instead of routing key.
+		- Default or Nameless Exchange
+			Default Exchnage will compares the queue name with routing key and not with binding key. 
 
 
-
+Core Concepts
+	* Producer emits messages to exchange.
+	* Consumer recives the messages from queue.
+	* Binding connects exchange with queue using binding key.
+	* Exchange compares routing key with binding key.
+	* Message distribution depends on type of exchange.
+	* Exchange types - fanout, header, direct, default or nameless(special), topic.
+	* Special exchange is created by RabbitMQ.
+	* Compares routing key with Queue Name.
+	* Special exchange allows directly sending to queues.
+	
+	
+	
+	
+	
+			
 	
 What is Publishing of Message?
 	- Producer will send the message to exchange then later exchange will forward the message to Queue.
