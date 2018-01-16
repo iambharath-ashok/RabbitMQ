@@ -45,18 +45,13 @@ Core Concepts
 	* Special exchange is created by RabbitMQ.
 	* Compares routing key with Queue Name.
 	* Special exchange allows directly sending to queues.
-	
-	
-	
-	
-	
-			
+
 	
 What is Publishing of Message?
 	- Producer will send the message to exchange then later exchange will forward the message to Queue.
 	
 What is Consuming of Messages?
-	- Consuming the messages from consumer from queue is Consuming of messages.
+	- Consuming the messages by consumer from queue is Consuming of messages.
 	
 	
 
